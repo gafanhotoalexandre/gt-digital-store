@@ -6,7 +6,7 @@ import { Search } from './Search'
 
 export function MobileHeader() {
   return (
-    <header className='z-10 bg-white shadow-md border mb-5 py-8 px-4 md:hidden'>
+    <header className='z-10 bg-white shadow-md border py-8 px-4 md:hidden'>
       <div className='flex items-center justify-between'>
         <MobileMenu />
         <img src={logo} alt='Digital Store Logo' className='h-6' />

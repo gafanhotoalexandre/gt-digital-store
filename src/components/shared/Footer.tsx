@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Twitter } from 'lucide-react'
+
 import logo from '@/assets/logo_footer.svg'
 import { Separator } from '../ui/separator'
 

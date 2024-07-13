@@ -8,7 +8,7 @@ import { LoginButton } from '../LoginButton'
 
 export function DesktopHeader() {
   return (
-    <header className='bg-white shadow-md border mb-5 md:px-[100px] py-8'>
+    <header className='bg-white shadow-md border md:px-[100px] py-8'>
       <div className='mx-auto flex items-center gap-10'>
         <div className='flex-1 flex items-center space-x-4'>
           <img src={logo} alt='Digital Store Logo' className='h-8' />
