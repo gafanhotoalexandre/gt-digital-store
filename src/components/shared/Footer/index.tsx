@@ -9,8 +9,8 @@ import { FOOTER_INFO_LINKS_1, FOOTER_INFO_LINKS_2 } from '@/constants'
 
 export function Footer() {
   return (
-    <footer className='bg-neutral-900 text-neutral-300 py-8 px-0 md:px-[100px]'>
-      <div className=''>
+    <footer className='bg-neutral-900 text-neutral-300 py-12 px-0 md:px-[100px]'>
+      <div className='px-5 md:px-0'>
         <div className='flex flex-col gap-10 md:flex-row md:justify-between'>
           <div className='flex flex-col items-start md:max-w-[307px] '>
             <Logo variant='footer' className='h-7 md:h-11 mb-8' />
