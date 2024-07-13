@@ -1,17 +1,17 @@
 import { ShoppingCartIcon } from 'lucide-react'
 
-import logo from '@/assets/logo.svg'
 import { Search } from './Search'
 import { Nav } from './Nav'
 import { RegisterButton } from '../RegisterButton'
 import { LoginButton } from '../LoginButton'
+import { Logo } from './Logo'
 
 export function DesktopHeader() {
   return (
     <header className='bg-white shadow-md border md:px-[100px] py-8'>
       <div className='mx-auto flex items-center gap-10'>
         <div className='flex-1 flex items-center space-x-4'>
-          <img src={logo} alt='Digital Store Logo' className='h-8' />
+          <Logo />
           <Search />
         </div>
 

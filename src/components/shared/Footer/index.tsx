@@ -1,10 +1,11 @@
-import logo from '@/assets/logo_footer.svg'
-import { Separator } from '../../ui/separator'
+import { Separator } from '@/components/ui/separator'
 import { FooterSocials } from './Socials'
 import { FooterLinkList } from './LinkList'
-import { FOOTER_INFO_LINKS_1, FOOTER_INFO_LINKS_2 } from '@/constants'
 import { FooterSection } from './Section'
 import { FooterContact } from './Contact'
+
+import logo from '@/assets/logo_footer.svg'
+import { FOOTER_INFO_LINKS_1, FOOTER_INFO_LINKS_2 } from '@/constants'
 
 export function Footer() {
   return (
