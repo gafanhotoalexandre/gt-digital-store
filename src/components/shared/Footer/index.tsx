@@ -3,8 +3,8 @@ import { FooterSocials } from './Socials'
 import { FooterLinkList } from './LinkList'
 import { FooterSection } from './Section'
 import { FooterContact } from './Contact'
+import { Logo } from '../Logo'
 
-import logo from '@/assets/logo_footer.svg'
 import { FOOTER_INFO_LINKS_1, FOOTER_INFO_LINKS_2 } from '@/constants'
 
 export function Footer() {
@@ -13,7 +13,8 @@ export function Footer() {
       <div className='container px-5'>
         <div className='flex flex-col gap-10 md:flex-row md:justify-between'>
           <div className='flex flex-col items-start md:max-w-[307px] '>
-            <img src={logo} alt='Digital Store Logo' className='h-8 mb-8' />
+            <Logo variant='footer' className='h-7 md:h-11 mb-8' />
+
             <p className='md:text-left'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore.
