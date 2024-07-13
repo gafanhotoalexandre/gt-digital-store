@@ -11,7 +11,7 @@ export function DesktopHeader() {
     <header className='bg-white shadow-md border md:px-[100px] py-8'>
       <div className='mx-auto flex items-center gap-10'>
         <div className='flex-1 flex items-center space-x-4'>
-          <Logo variant='default' className='h-8' />
+          <Logo variant='default' className='h-11' />
           <Search />
         </div>
 
