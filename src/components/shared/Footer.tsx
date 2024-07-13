@@ -24,7 +24,7 @@ export function Footer() {
 
           <div className='mt-10 md:mt-0 flex gap-8 md:gap-0 md:space-x-16'>
             <div className='flex flex-col items-start md:max-w-[135px]'>
-              <h3 className='font-semibold mb-7'>Informação</h3>
+              <h3 className='font-semibold mb-7 text-lg'>Informação</h3>
               <ul className='space-y-2'>
                 <li>Sobre Drip Store</li>
                 <li>Segurança</li>
@@ -36,7 +36,7 @@ export function Footer() {
             </div>
 
             <div className='flex flex-col items-start md:max-w-24'>
-              <h3 className='font-semibold mb-7'>Informação</h3>
+              <h3 className='font-semibold mb-7 text-lg'>Informação</h3>
               <ul className='space-y-2'>
                 <li>Camisetas</li>
                 <li>Calças</li>
@@ -48,7 +48,7 @@ export function Footer() {
           </div>
 
           <div className='mt-8 md:mt-0'>
-            <h3 className='font-semibold mb-7'>Contato</h3>
+            <h3 className='font-semibold mb-7 text-lg'>Contato</h3>
             <address className='not-italic'>
               Av. Santos Dumont, 1510 - 1 andar <br />
               Aldeota, Fortaleza - CE, 60150-161 <br />
@@ -58,7 +58,9 @@ export function Footer() {
         </div>
 
         <Separator className='mt-8 bg-neutral-700' />
-        <div className='text-center pt-4'>&copy; 2022 Digital College</div>
+        <div className='text-center pt-4'>
+          &copy; {new Date().getFullYear()} Digital College
+        </div>
       </div>
     </footer>
   )
