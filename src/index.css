@@ -80,3 +80,9 @@ a {
 a:hover {
   @apply text-primary
 }
+
+
+/* Carousel Dots */
+.swiper-pagination-bullet-active {
+  @apply bg-primary
+}
