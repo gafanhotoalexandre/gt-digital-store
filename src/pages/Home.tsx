@@ -1,10 +1,9 @@
-import { Button } from '@/components/ui/button'
+import { HeroSection } from './components/HeroSection'
 
 export function HomePage() {
   return (
     <>
-      <p>HomePage</p>
-      <Button>clique aqui</Button>
+      <HeroSection />
     </>
   )
 }

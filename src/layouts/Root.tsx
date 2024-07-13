@@ -8,7 +8,7 @@ export function RootLayout() {
     <>
       <Header />
 
-      <main className='bg-red-400 p-5'>
+      <main className='bg-red-400 md:p-5'>
         <Outlet />
       </main>
 
