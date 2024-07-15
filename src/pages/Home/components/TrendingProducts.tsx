@@ -38,7 +38,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
       {discount && (
         <DiscountBadge
           discount={discount}
-          className='absolute top-4 left-4 w-20 h-8 md:w-auto md:h-auto'
+          className='absolute top-4 left-4 w-20 h-8 md:w-24'
         />
       )}
       <img
