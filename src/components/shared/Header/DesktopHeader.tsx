@@ -8,7 +8,7 @@ import { Logo } from '../Logo'
 
 export function DesktopHeader() {
   return (
-    <header className='bg-white shadow-md border md:px-[100px] py-8'>
+    <header className='bg-white shadow-md border md:px-24 py-8'>
       <div className='mx-auto flex items-center gap-10'>
         <div className='flex-1 flex items-center space-x-4'>
           <Logo variant='default' className='h-11' />

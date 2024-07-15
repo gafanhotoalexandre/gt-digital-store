@@ -1,5 +1,6 @@
 import { HeroSection } from './components/HeroSection'
 import { FeaturedCollections } from './components/FeaturedCollections'
+import { TrendingProducts } from './components/TrendingProducts'
 
 export function HomePage() {
   return (
@@ -7,6 +8,8 @@ export function HomePage() {
       <HeroSection />
 
       <FeaturedCollections />
+
+      <TrendingProducts />
     </div>
   )
 }

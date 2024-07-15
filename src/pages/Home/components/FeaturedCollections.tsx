@@ -5,7 +5,7 @@ import { COLLECTION_ITEMS } from '@/constants'
 
 export function FeaturedCollections() {
   return (
-    <section className='px-5 pt-9 pb-24 md:px-24 bg-slate-100'>
+    <section className='px-5 pt-9 pb-32 md:px-24 bg-slate-100'>
       <h2 className='text-2xl text-zinc-500 font-bold mb-8'>
         Coleções em destaque
       </h2>

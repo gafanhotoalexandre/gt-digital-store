@@ -1,3 +1,4 @@
+import DiscountBadge from '@/components/shared/DiscountBadge'
 import { Button } from '@/components/ui/button'
 
 interface CollectionItemProps {
@@ -20,9 +21,7 @@ export function CollectionItem({
         className='h-52 md:h-64 rounded-md z-0 absolute right-0 bottom-0  group-hover:rotate-6 group-hover:scale-125 transition-all'
       />
       <div className='mt-4 z-10 relative max-w-44'>
-        <span className='bg-lime-200 text-zinc-600 font-bold rounded-full mb-4 w-24 h-8 flex justify-center items-center'>
-          {discount}
-        </span>
+        <DiscountBadge discount={discount} />
         <h2 className='text-3xl text-zinc-800 font-bold mt-2'>{title}</h2>
         <Button
           variant={'secondary'}

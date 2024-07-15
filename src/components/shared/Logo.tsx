@@ -1,6 +1,7 @@
-import logo from '@/assets/logo.svg'
-import logoFooter from '@/assets/logo_footer.svg'
 import { Link } from 'react-router-dom'
+
+import logoFooter from '@/assets/logo_footer.svg'
+import logo from '@/assets/logo.svg'
 
 interface LogoProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   variant: 'default' | 'footer'
