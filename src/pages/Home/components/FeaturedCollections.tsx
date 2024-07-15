@@ -5,7 +5,7 @@ import { COLLECTION_ITEMS } from '@/constants'
 
 export function FeaturedCollections() {
   return (
-    <section className='px-5 pt-9 pb-32 md:px-24 bg-slate-100'>
+    <section className='px-5 pt-9 pb-1 md:pb-4 md:px-24 bg-slate-100'>
       <h2 className='text-2xl text-zinc-500 font-bold mb-8'>
         Coleções em destaque
       </h2>
@@ -21,7 +21,7 @@ export function FeaturedCollections() {
         ))}
       </div>
 
-      <section className='my-24 flex flex-col items-center gap-6'>
+      <section className='mt-20 mb-16 md:my-24 flex flex-col items-center gap-6'>
         <h2 className='text-2xl text-zinc-500 font-bold'>
           Coleções em destaque
         </h2>
