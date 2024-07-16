@@ -13,6 +13,8 @@ import capIcon from '@/assets/featured_icons/pants.svg'
 import headphonesIcon from '@/assets/featured_icons/headphone.svg'
 import shoesIcon from '@/assets/featured_icons/shoe.svg'
 
+import shoeProductImage from '@/assets/product_shoe.svg'
+
 export const NAV_ITEMS = [
   { label: 'Home', path: '/' },
   { label: 'Produtos', path: '/produtos' },
@@ -94,4 +96,17 @@ export const CATEGORY_ITEMS = [
     iconSrc: shoesIcon,
     label: 'Tênis',
   },
+]
+
+// Products
+export const products = [
+  {
+    discount: '30% OFF',
+    title: 'K-Swiss V8 - Masculino',
+    price: '$100',
+    originalPrice: '$200',
+    imageSrc: shoeProductImage,
+    altText: 'K-Swiss V8 Shoe',
+  },
+  // Adicionar outros produtos conforme necessário
 ]
