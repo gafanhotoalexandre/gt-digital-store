@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { NAV_ITEMS } from '@/constants'
 
 interface NavProps {
-  onLinkClickClose: () => void
+  onLinkClickClose?: () => void
 }
 export function Nav({ onLinkClickClose }: NavProps) {
   return (
