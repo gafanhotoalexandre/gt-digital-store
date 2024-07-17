@@ -9,7 +9,7 @@ const options = [
   { value: 'low-to-high', label: 'menor preço' },
   { value: 'high-to-low', label: 'maior preço' },
 ]
-export default function ProductsPage() {
+export function ProductsPage() {
   const [product] = PRODUCTS
 
   return (

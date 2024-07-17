@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import DiscountBadge from './DiscountBadge'
 
 interface ProductItemProps {
@@ -7,6 +8,7 @@ interface ProductItemProps {
   originalPrice: string
   imageSrc: string
   altText: string
+  id: string
 }
 export const ProductItem = ({
   discount,
@@ -15,8 +17,9 @@ export const ProductItem = ({
   originalPrice,
   imageSrc,
   altText,
+  id,
 }: ProductItemProps) => (
-  <div className='flex flex-col'>
+  <Link to={`${id}`} className='flex flex-col'>
     <div className='bg-white p-4 rounded shadow-lg relative'>
       {discount && (
         <DiscountBadge
@@ -45,5 +48,5 @@ export const ProductItem = ({
         </span>
       </div>
     </div>
-  </div>
+  </Link>
 )

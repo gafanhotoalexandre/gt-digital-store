@@ -107,6 +107,7 @@ export const PRODUCTS = [
     originalPrice: '$200',
     imageSrc: shoeProductImage,
     altText: 'K-Swiss V8 Shoe',
+    id: '556901db-813f-47af-b83c-b391d1d8cdaf',
   },
   // Adicionar outros produtos conforme necessário
 ]

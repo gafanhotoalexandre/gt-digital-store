@@ -3,10 +3,12 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from 'react-router-dom'
-import { HomePage } from './pages/Home'
 import { RootLayout as Root } from './layouts/Root'
-import ProductsPage from './pages/Products'
+
+import { ProductPage } from './pages/Product'
+import { ProductsPage } from './pages/Products'
 import { NotFoundPage } from './pages/NotFound'
+import { HomePage } from './pages/Home'
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -14,6 +16,7 @@ export const router = createBrowserRouter(
       <Route path='/' element={<Root />} errorElement={<NotFoundPage />}>
         <Route index element={<HomePage />} />
         <Route path='/produtos' element={<ProductsPage />} />
+        <Route path='/produtos/:id' element={<ProductPage />} />
       </Route>
     </>
   )
