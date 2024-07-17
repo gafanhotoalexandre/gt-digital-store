@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 import { SearchIcon, ShoppingCartIcon } from 'lucide-react'
 
 import { MobileMenu } from './MobileMenu'
@@ -8,9 +9,10 @@ import { Button } from '@/components/ui/button'
 
 export function MobileHeader() {
   const [isOpen, setIsOpen] = useState(false)
+  const [parent] = useAutoAnimate()
 
   return (
-    <header className='z-10 bg-white shadow-md border p-4'>
+    <header ref={parent} className='z-10 bg-white shadow-md border p-4'>
       <div className='flex items-center justify-between md:px-24 relative'>
         <MobileMenu />
         <Logo
@@ -32,9 +34,11 @@ export function MobileHeader() {
         </div>
       </div>
 
-      <div className={`mt-5 md:px-24 ${isOpen ? '' : 'hidden'}`}>
-        <Search />
-      </div>
+      {isOpen && (
+        <div className={`mt-5 md:px-24`}>
+          <Search />
+        </div>
+      )}
     </header>
   )
 }
