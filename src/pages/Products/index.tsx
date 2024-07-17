@@ -6,10 +6,13 @@ export default function ProductsPage() {
   const [product] = PRODUCTS
 
   return (
-    <div className='px-5 pt-9 pb-32 md:px-24 bg-slate-100'>
+    <div className='px-5 pt-9 pb-24 md:pb-32 md:px-24 bg-slate-100'>
       <div className='flex justify-between items-center mb-8'>
-        <h1 className='text-2xl font-bold text-zinc-800'>
-          Resultados para "Tênis" - 389 produtos
+        <h1 className='text-zinc-600'>
+          <span className='text-base font-bold'>
+            Resultados para "Tênis" -{' '}
+          </span>
+          389 produtos
         </h1>
         {/* <Dropdown
         options={['mais relevantes', 'menor preço', 'maior preço']}

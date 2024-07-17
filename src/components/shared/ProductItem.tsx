@@ -21,7 +21,7 @@ export const ProductItem = ({
       {discount && (
         <DiscountBadge
           discount={discount}
-          className='absolute top-4 left-4 w-20 h-8 md:w-24'
+          className='absolute top-4 left-4 w-16 h-8 sm:w-20 md:w-24'
         />
       )}
       <img

@@ -8,7 +8,7 @@ interface DiscountBadgeProps {
 const DiscountBadge = ({ discount, className }: DiscountBadgeProps) => (
   <span
     className={cn(
-      'bg-lime-200 text-zinc-600 font-bold rounded-full mb-4 w-24 h-8 flex justify-center items-center',
+      'bg-lime-200 text-zinc-600 font-bold rounded-full mb-4 w-24 h-8 flex justify-center items-center text-xs sm:text-sm md:text-base',
       className
     )}
   >
