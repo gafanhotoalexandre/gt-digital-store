@@ -1,7 +1,13 @@
 import { ProductItem } from '@/components/shared/ProductItem'
 import { FilterSidebar } from './components/FilterSidebar'
 import { PRODUCTS } from '@/constants'
+import { Dropdown } from './components/Dropdown'
 
+const options = [
+  { value: 'relevant', label: 'mais relevantes' },
+  { value: 'low-to-high', label: 'menor preço' },
+  { value: 'high-to-low', label: 'maior preço' },
+]
 export default function ProductsPage() {
   const [product] = PRODUCTS
 
@@ -14,11 +20,7 @@ export default function ProductsPage() {
           </span>
           389 produtos
         </h1>
-        {/* <Dropdown
-        options={['mais relevantes', 'menor preço', 'maior preço']}
-        selectedOption={selectedOption}
-        onChange={setSelectedOption}
-      /> */}
+        <Dropdown options={options} placeholder='Ordenar por:' />
       </div>
       <div className='flex flex-col gap-7 md:flex-row md:items-start'>
         <FilterSidebar />
