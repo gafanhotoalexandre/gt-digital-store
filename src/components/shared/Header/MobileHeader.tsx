@@ -10,12 +10,12 @@ export function MobileHeader() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className='z-10 bg-white shadow-md border p-4 md:hidden'>
-      <div className='flex items-center justify-between relative'>
+    <header className='z-10 bg-white shadow-md border p-4'>
+      <div className='flex items-center justify-between md:px-24 relative'>
         <MobileMenu />
         <Logo
           variant='default'
-          className='h-6 flex-1 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'
+          className='h-6 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'
         />
 
         <div className='flex items-center gap-2'>
@@ -32,7 +32,7 @@ export function MobileHeader() {
         </div>
       </div>
 
-      <div className={`mt-5 ${isOpen ? '' : 'hidden'}`}>
+      <div className={`mt-5 md:px-24 ${isOpen ? '' : 'hidden'}`}>
         <Search />
       </div>
     </header>

@@ -4,10 +4,10 @@ import { MobileHeader } from './MobileHeader'
 export function Header() {
   return (
     <>
-      <div className='hidden md:block'>
+      <div className='hidden lg:block'>
         <DesktopHeader />
       </div>
-      <div className='block md:hidden'>
+      <div className='block lg:hidden'>
         <MobileHeader />
       </div>
     </>
