@@ -1,3 +1,6 @@
+import { Checkbox } from '@/components/ui/checkbox'
+import { Label } from '@/components/ui/label'
+
 interface FilterSectionProps {
   title: string
   options: string[]
@@ -13,13 +16,21 @@ export function FilterSection({
 }: FilterSectionProps) {
   return (
     <div>
-      <h3 className='text-lg font-semibold mb-2'>{title}</h3>
-      <div className='flex flex-col gap-2'>
+      <h3 className='text-lg font-semibold mb-2 text-zinc-700'>{title}</h3>
+      <div className='flex flex-col gap-2 text-zinc-700'>
         {options.map((option, index) => (
-          <label key={index} className='flex items-center'>
-            <input type={inputType} name={name} className='mr-2' />
+          <Label key={index} className='flex items-center gap-2 font-normal'>
+            {inputType === 'checkbox' ? (
+              <Checkbox className='border-zinc-400 aria-checked:border-primary' />
+            ) : (
+              <input
+                type={inputType}
+                name={name}
+                className='w-4 h-4 accent-primary'
+              />
+            )}
             {option}
-          </label>
+          </Label>
         ))}
       </div>
     </div>
