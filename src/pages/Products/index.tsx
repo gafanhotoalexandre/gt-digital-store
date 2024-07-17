@@ -1,9 +1,9 @@
 import { ProductItem } from '@/components/shared/ProductItem'
 import { FilterSidebar } from './components/FilterSidebar'
-import { products } from '@/constants'
+import { PRODUCTS } from '@/constants'
 
 export default function ProductsPage() {
-  const [product] = products
+  const [product] = PRODUCTS
 
   return (
     <div className='px-5 py-9 md:px-24 bg-slate-100'>

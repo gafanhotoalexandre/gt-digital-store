@@ -2,10 +2,10 @@ import { ArrowRight } from 'lucide-react'
 
 import { ProductItem } from '@/components/shared/ProductItem'
 import { Button } from '@/components/ui/button'
-import { products } from '@/constants'
+import { PRODUCTS } from '@/constants'
 
 export function TrendingProducts() {
-  const [product] = products
+  const [product] = PRODUCTS
   return (
     <section className='px-5 pb-32 md:px-24 bg-slate-100'>
       <div className='flex justify-between items-center mb-5'>

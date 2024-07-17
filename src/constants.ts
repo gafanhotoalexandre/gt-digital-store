@@ -99,7 +99,7 @@ export const CATEGORY_ITEMS = [
 ]
 
 // Products
-export const products = [
+export const PRODUCTS = [
   {
     discount: '30% OFF',
     title: 'K-Swiss V8 - Masculino',
