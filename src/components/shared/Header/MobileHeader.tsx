@@ -10,7 +10,7 @@ export function MobileHeader() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className='z-10 bg-white shadow-md border py-8 px-4 md:hidden'>
+    <header className='z-10 bg-white shadow-md border p-4 md:hidden'>
       <div className='flex items-center justify-between relative'>
         <MobileMenu />
         <Logo
