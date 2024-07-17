@@ -1,7 +1,8 @@
 import { ProductItem } from '@/components/shared/ProductItem'
 import { FilterSidebar } from './components/FilterSidebar'
-import { PRODUCTS } from '@/constants'
 import { Dropdown } from './components/Dropdown'
+import { FilterSidebarMobile } from './components/FilterSidebarMobile'
+import { PRODUCTS } from '@/constants'
 
 const options = [
   { value: 'relevant', label: 'mais relevantes' },
@@ -13,15 +14,21 @@ export default function ProductsPage() {
 
   return (
     <div className='px-5 pt-9 pb-24 md:pb-32 md:px-24 bg-slate-100'>
-      <div className='flex justify-between items-center mb-8'>
-        <h1 className='text-zinc-600'>
+      <div className='flex flex-col md:flex-row gap-5 md:gap-0 justify-between md:items-center mb-8'>
+        <h1 className='text-zinc-600 order-2 md:order-1'>
           <span className='text-base font-bold'>
             Resultados para "Tênis" -{' '}
           </span>
           389 produtos
         </h1>
-        <Dropdown options={options} placeholder='Ordenar por:' />
+
+        <div className='order-1 md:order-2 flex gap-2'>
+          <Dropdown options={options} placeholder='Ordenar por:' />
+
+          <FilterSidebarMobile />
+        </div>
       </div>
+
       <div className='flex flex-col gap-7 md:flex-row md:items-start'>
         <FilterSidebar />
 

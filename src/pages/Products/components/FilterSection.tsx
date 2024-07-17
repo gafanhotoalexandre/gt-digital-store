@@ -16,7 +16,9 @@ export function FilterSection({
 }: FilterSectionProps) {
   return (
     <div>
-      <h3 className='text-lg font-semibold mb-2 text-zinc-700'>{title}</h3>
+      <h3 className='text-sm md:text-lg font-bold mb-2 text-zinc-700'>
+        {title}
+      </h3>
       <div className='flex flex-col gap-2 text-zinc-700'>
         {options.map((option, index) => (
           <Label key={index} className='flex items-center gap-2 font-normal'>
