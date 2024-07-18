@@ -16,7 +16,10 @@ export type Product = {
   discount?: number
   description: string
   sizes: number[]
-  colors: string[]
+  colors: {
+    label: string
+    hex: string
+  }[]
   images: Image[]
   thumbnails: Image[]
 }

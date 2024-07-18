@@ -125,11 +125,16 @@ export const mockProduct: Product = {
   reviews: 90,
   price: 219.0,
   originalPrice: 249.0,
-  discount: 30,
+  discount: 12,
   description:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   sizes: [39, 40, 41, 42, 43],
-  colors: ['red', 'blue', 'gray', 'black'],
+  colors: [
+    { label: 'vermelho', hex: '#ef4444' },
+    { label: 'azul', hex: '#3b82f6' },
+    { label: 'cinza', hex: '#6b7280' },
+    { label: 'preto', hex: '#000000' },
+  ],
   images: [
     {
       url: 'https://via.placeholder.com/400',
