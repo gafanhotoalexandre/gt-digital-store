@@ -9,6 +9,7 @@ import capIcon from '@/assets/featured_icons/pants.svg'
 import headphonesIcon from '@/assets/featured_icons/headphone.svg'
 import shoesIcon from '@/assets/featured_icons/shoe.svg'
 import shoeProductImage from '@/assets/product_shoe.svg'
+import productNikeImage from '@/assets/nike_shoe.svg'
 
 export {
   shoeImage,
@@ -22,4 +23,5 @@ export {
   headphonesIcon,
   shoesIcon,
   shoeProductImage,
+  productNikeImage,
 }

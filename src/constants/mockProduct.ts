@@ -1,4 +1,5 @@
 import { Product } from '../types'
+import { productNikeImage } from './images'
 
 export const mockProduct: Product = {
   id: '1',
@@ -22,7 +23,7 @@ export const mockProduct: Product = {
   ],
   images: [
     {
-      url: 'https://via.placeholder.com/400',
+      url: productNikeImage,
       altText: 'Tênis Nike Revolution 6',
     },
   ],

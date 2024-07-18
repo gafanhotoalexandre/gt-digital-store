@@ -25,12 +25,14 @@ export function ProductPrice({
             </span>
           </span>
         </span>
+
         {originalPrice && (
           <span className='line-through ml-2 text-gray-500'>
             R$ {originalPrice.toFixed(2)}
           </span>
         )}
       </div>
+
       {discount && (
         <div className='mt-1 text-sm text-green-600'>
           {discount}% de desconto

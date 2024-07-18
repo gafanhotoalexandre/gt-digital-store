@@ -11,7 +11,7 @@ export function ProductImages({ images, thumbnails }: ProductImagesProps) {
       <img
         src={images[0].url}
         alt={images[0].altText}
-        className='w-full rounded-lg shadow-md'
+        className='w-full rounded-lg shadow-md bg-indigo-100 px-12 py-20 md:px-24 md:py-40 md:min-h-[560px]'
       />
       <div className='flex justify-center gap-2'>
         {thumbnails.map((thumbnail, index) => (
