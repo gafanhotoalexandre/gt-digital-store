@@ -14,7 +14,7 @@ export function NavBreadcrumbs() {
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink>
+          <BreadcrumbLink asChild>
             <Link to='/'>Home</Link>
           </BreadcrumbLink>
         </BreadcrumbItem>
@@ -22,7 +22,7 @@ export function NavBreadcrumbs() {
         <BreadcrumbSeparator />
 
         <BreadcrumbItem>
-          <BreadcrumbLink>
+          <BreadcrumbLink asChild>
             <Link to='/produtos'>Produtos</Link>
           </BreadcrumbLink>
         </BreadcrumbItem>
