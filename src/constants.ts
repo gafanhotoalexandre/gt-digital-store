@@ -15,6 +15,8 @@ import shoesIcon from '@/assets/featured_icons/shoe.svg'
 
 import shoeProductImage from '@/assets/product_shoe.svg'
 
+import { Product } from './types'
+
 export const NAV_ITEMS = [
   { label: 'Home', path: '/' },
   { label: 'Produtos', path: '/produtos' },
@@ -111,3 +113,32 @@ export const PRODUCTS = [
   },
   // Adicionar outros produtos conforme necessário
 ]
+
+// Product
+export const mockProduct: Product = {
+  id: '1',
+  name: 'Tênis Nike Revolution 6 Next Nature Masculino',
+  category: 'Casual',
+  brand: 'Nike',
+  ref: '38476171',
+  rating: 4.7,
+  reviews: 90,
+  price: 219.0,
+  originalPrice: 249.0,
+  discount: 30,
+  description:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  sizes: [39, 40, 41, 42, 43],
+  colors: ['red', 'blue', 'gray', 'black'],
+  images: [
+    {
+      url: 'https://via.placeholder.com/400',
+      altText: 'Tênis Nike Revolution 6',
+    },
+  ],
+  thumbnails: [
+    { url: 'https://via.placeholder.com/100', altText: 'Thumbnail 1' },
+    { url: 'https://via.placeholder.com/100', altText: 'Thumbnail 2' },
+    { url: 'https://via.placeholder.com/100', altText: 'Thumbnail 3' },
+  ],
+}
