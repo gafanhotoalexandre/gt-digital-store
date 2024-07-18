@@ -23,15 +23,7 @@ export function TrendingProducts() {
       </div>
       <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6'>
         {Array.from({ length: 8 }).map((_, index) => (
-          <ProductItem
-            key={index}
-            discount={product.discount}
-            title={product.title}
-            price={product.price}
-            originalPrice={product.originalPrice}
-            imageSrc={product.imageSrc}
-            altText={product.altText}
-          />
+          <ProductItem key={index} {...product} />
         ))}
       </div>
     </section>

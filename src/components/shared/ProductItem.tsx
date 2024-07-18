@@ -19,7 +19,7 @@ export const ProductItem = ({
   altText,
   id,
 }: ProductItemProps) => (
-  <Link to={`${id}`} className='flex flex-col'>
+  <Link to={`/produtos/${id}`} className='flex flex-col'>
     <div className='bg-white p-4 rounded shadow-lg relative'>
       {discount && (
         <DiscountBadge

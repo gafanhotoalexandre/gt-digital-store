@@ -9,7 +9,7 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
 
-export const BreadcrumbWithCustomSeparator: React.FC = () => {
+export function NavBreadcrumbs() {
   return (
     <Breadcrumb>
       <BreadcrumbList>
@@ -23,14 +23,16 @@ export const BreadcrumbWithCustomSeparator: React.FC = () => {
 
         <BreadcrumbItem>
           <BreadcrumbLink>
-            <Link to='/components'>Components</Link>
+            <Link to='/produtos'>Produtos</Link>
           </BreadcrumbLink>
         </BreadcrumbItem>
 
         <BreadcrumbSeparator />
 
         <BreadcrumbItem>
-          <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+          <BreadcrumbPage className='text-zinc-600 font-bold'>
+            Nome do produto
+          </BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
