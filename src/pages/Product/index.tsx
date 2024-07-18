@@ -1,8 +1,17 @@
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+
 import { Badge } from '@/components/ui/badge'
 import { NavBreadcrumbs } from './components/NavBreadcrumbs'
 import { Button } from '@/components/ui/button'
 
 export function ProductPage() {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
   return (
     <div className='px-5 pt-5 pb-24 md:pb-32 md:px-24 bg-slate-100 flex flex-col gap-10'>
       <NavBreadcrumbs />
