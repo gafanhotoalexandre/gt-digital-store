@@ -1,6 +1,7 @@
 export type Image = {
   url: string
   altText: string
+  bgColor?: string
 }
 
 export type Product = {

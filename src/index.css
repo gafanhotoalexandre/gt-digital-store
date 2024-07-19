@@ -86,3 +86,11 @@ a:hover {
 .swiper-pagination-bullet-active {
   @apply bg-primary
 }
+
+.product-carousel {
+  @apply !flex justify-center gap-7 mt-5
+}
+
+.slick-list {
+  @apply rounded-lg shadow-md bg-transparent
+}

@@ -16,6 +16,9 @@ import { ProductOptions } from './components/ProductOptions'
 
 import { ProductPageSkeleton } from './loading'
 
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
 export function ProductPage() {
   const { pathname } = useLocation()
   const { id } = useParams<{ id: string }>()

@@ -28,8 +28,8 @@ export const mockProduct: Product = {
     },
   ],
   thumbnails: [
-    { url: 'https://via.placeholder.com/100', altText: 'Thumbnail 1' },
-    { url: 'https://via.placeholder.com/100', altText: 'Thumbnail 2' },
-    { url: 'https://via.placeholder.com/100', altText: 'Thumbnail 3' },
+    { url: productNikeImage, altText: 'Thumbnail 1', bgColor: 'bg-indigo-100' },
+    { url: productNikeImage, altText: 'Thumbnail 2', bgColor: 'bg-amber-100' },
+    { url: productNikeImage, altText: 'Thumbnail 3', bgColor: 'bg-red-100' },
   ],
 }
