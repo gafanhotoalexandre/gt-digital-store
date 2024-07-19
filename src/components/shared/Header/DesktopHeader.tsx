@@ -1,10 +1,9 @@
-import { ShoppingCartIcon } from 'lucide-react'
-
 import { Search } from './Search'
 import { Nav } from './Nav'
 import { RegisterButton } from '../RegisterButton'
 import { LoginButton } from '../LoginButton'
 import { Logo } from '../Logo'
+import { ShoppingCart } from './ShoppingCart'
 
 export function DesktopHeader() {
   return (
@@ -20,7 +19,8 @@ export function DesktopHeader() {
             <RegisterButton />
             <LoginButton />
           </div>
-          <ShoppingCartIcon className='h-6 w-6 text-gray-700' />
+
+          <ShoppingCart />
         </div>
       </div>
 

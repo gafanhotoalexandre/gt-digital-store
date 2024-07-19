@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { useAutoAnimate } from '@formkit/auto-animate/react'
-import { SearchIcon, ShoppingCartIcon } from 'lucide-react'
+import { SearchIcon } from 'lucide-react'
 
 import { MobileMenu } from './MobileMenu'
 import { Search } from './Search'
 import { Logo } from '../Logo'
+import { ShoppingCart } from './ShoppingCart'
+
 import { Button } from '@/components/ui/button'
 
 export function MobileHeader() {
@@ -30,12 +32,12 @@ export function MobileHeader() {
             <SearchIcon size={20} className='group-focus:text-primary' />
           </Button>
 
-          <ShoppingCartIcon className='h-6 w-6 text-gray-700' />
+          <ShoppingCart />
         </div>
       </div>
 
       {isOpen && (
-        <div className={`mt-5 md:px-24`}>
+        <div className='mt-5 md:px-24'>
           <Search />
         </div>
       )}
