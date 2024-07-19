@@ -14,6 +14,8 @@ import { ProductPrice } from './components/ProductPrice'
 import { BuyButton } from './components/BuyButton'
 import { ProductOptions } from './components/ProductOptions'
 
+import { ProductPageSkeleton } from './loading'
+
 export function ProductPage() {
   const { pathname } = useLocation()
   const { id } = useParams<{ id: string }>()
@@ -29,7 +31,7 @@ export function ProductPage() {
   }, [id])
 
   if (!product) {
-    return <p>Carregando...</p>
+    return <ProductPageSkeleton />
   }
 
   return (
