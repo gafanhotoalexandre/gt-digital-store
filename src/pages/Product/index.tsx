@@ -15,6 +15,7 @@ import { BuyButton } from './components/BuyButton'
 import { ProductOptions } from './components/ProductOptions'
 
 import { ProductPageSkeleton } from './loading'
+import { cn } from '@/lib/utils'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -67,11 +68,18 @@ export function ProductPage() {
             title='Tamanho'
             items={product.sizes}
             className='mt-8'
-            renderItem={(size) => (
+            renderItem={(size, isActive, onSelectSize) => (
               <Button
                 key={size}
                 variant='outline'
-                className='bg-transparent hover:bg-white/75 px-4 py-2 font-bold'
+                className={cn(
+                  'bg-transparent hover:bg-white/75 px-4 py-2 font-bold',
+                  {
+                    'bg-primary text-white hover:bg-primary hover:text-white':
+                      isActive,
+                  }
+                )}
+                onClick={onSelectSize}
               >
                 {size}
               </Button>
@@ -81,11 +89,17 @@ export function ProductPage() {
           <ProductOptions
             title='Cor'
             items={product.colors}
-            renderItem={({ label, hex }) => (
+            renderItem={({ label, hex }, isActive, onSelectColor) => (
               <Button
                 key={hex}
                 style={{ backgroundColor: `${hex}` }}
-                className='w-8 h-8 rounded-full transition hover:opacity-85'
+                className={cn(
+                  'w-8 h-8 rounded-full transition hover:opacity-85',
+                  {
+                    'ring-2 ring-primary ring-offset-2': isActive,
+                  }
+                )}
+                onClick={onSelectColor}
               >
                 <Label className='sr-only'>{label}</Label>
               </Button>
