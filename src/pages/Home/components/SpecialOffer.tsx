@@ -3,7 +3,7 @@ import specialOfferImage from '@/assets/special_offer.svg' // Substitua pelo cam
 
 export function SpecialOffer() {
   return (
-    <section className='flex flex-col md:flex-row items-center justify-center md:gap-8 py-12 md:py-28 px-5 bg-slate-100 overflow-hidden'>
+    <section className='flex flex-col md:flex-row items-center justify-center md:gap-8 pt-16 pb-12 md:py-28 px-5 bg-white overflow-hidden'>
       <div className='flex-1 flex justify-center max-w-xl relative'>
         <div className='absolute -top-7 w-full max-w-72 md:max-w-max md:w-[466px] md:h-[466px] rounded-full bg-gradient-to-b from-violet-300 to-transparent opacity-75 aspect-square' />
         <img
