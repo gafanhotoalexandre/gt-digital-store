@@ -24,3 +24,13 @@ export type Product = {
   images: Image[]
   thumbnails: Image[]
 }
+
+export interface SimplifiedProduct {
+  discount?: number
+  title: string
+  price: number
+  originalPrice: number
+  imageSrc: string
+  altText: string
+  id: string
+}

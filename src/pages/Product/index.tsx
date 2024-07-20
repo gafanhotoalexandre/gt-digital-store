@@ -31,7 +31,9 @@ export function ProductPage() {
 
   useEffect(() => {
     // simulando chamada a api
-    setProduct(mockProduct)
+    setTimeout(() => {
+      setProduct(mockProduct)
+    }, 600) // delay
   }, [id])
 
   if (!product) {

@@ -1,15 +1,17 @@
 import { Link } from 'react-router-dom'
 import DiscountBadge from './DiscountBadge'
+import { formatCurrencyBRL } from '@/lib/currency'
 
 interface ProductItemProps {
-  discount?: string
+  discount?: number
   title: string
-  price: string
-  originalPrice: string
+  price: number
+  originalPrice: number
   imageSrc: string
   altText: string
   id: string
 }
+
 export const ProductItem = ({
   discount,
   title,
@@ -23,7 +25,7 @@ export const ProductItem = ({
     <div className='bg-white p-4 rounded shadow-lg relative'>
       {discount && (
         <DiscountBadge
-          discount={discount}
+          discount={`${discount}% OFF`}
           className='absolute top-4 left-4 w-[78px] h-8 sm:w-20 md:w-24'
         />
       )}
@@ -41,10 +43,10 @@ export const ProductItem = ({
       </h2>
       <div className='flex items-center mt-2'>
         <span className='line-through text-sm md:text-xl text-zinc-400'>
-          {originalPrice}
+          {formatCurrencyBRL(originalPrice)}
         </span>
         <span className='text-base md:text-2xl font-bold text-zinc-800 ml-2'>
-          {price}
+          {formatCurrencyBRL(price)}
         </span>
       </div>
     </div>
