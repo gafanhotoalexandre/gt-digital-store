@@ -20,6 +20,7 @@ export function FeaturedCollections() {
 
       <Section
         title='Coleções em destaque'
+        titleAlign='center'
         className='mt-20 mb-16 md:my-24 flex flex-col items-center p-0'
       >
         <Categories />

@@ -26,14 +26,15 @@ export const Section = ({
   >
     <div
       className={cn(
-        `flex items-center mb-5`,
-        titleAlign === 'center' ? 'justify-center' : 'justify-between'
+        `flex items-center mb-5 w-full`,
+        titleAlign === 'center' ? 'sm:justify-center' : 'justify-between'
       )}
     >
       <h2
-        className={`text-2xl text-zinc-500 font-bold ${
-          titleAlign === 'center' ? 'text-center' : 'text-left'
-        }`}
+        className={cn(
+          `text-base sm:text-2xl text-zinc-500 font-bold`,
+          titleAlign === 'center' ? 'sm:text-center' : 'text-left'
+        )}
       >
         {title}
       </h2>
