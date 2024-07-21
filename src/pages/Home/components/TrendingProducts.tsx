@@ -8,7 +8,7 @@ export function TrendingProducts() {
     <Section
       title='Produtos em alta'
       link={{ text: 'Ver todos', href: '#' }}
-      className='pb-20 pt-0'
+      className='pb-20 md:pb-32 pt-0'
     >
       <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6'>
         {Array.from({ length: 8 }).map((_, index) => (
