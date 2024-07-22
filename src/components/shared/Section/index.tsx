@@ -41,10 +41,13 @@ export const Section = ({
       {link && (
         <Button
           variant={'link'}
-          className='text-primary font-normal text-lg flex justify-center items-center gap-2'
+          className='text-primary font-normal text-lg flex justify-center items-center gap-2 group'
         >
           <span>Ver todos</span>
-          <ArrowRight width={16} className='font-bold' />
+          <ArrowRight
+            width={16}
+            className='font-bold group-hover:scale-105 group-hover:translate-x-1 transition-all'
+          />
         </Button>
       )}
     </div>

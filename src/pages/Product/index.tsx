@@ -4,7 +4,7 @@ import { useLocation, useParams } from 'react-router-dom'
 import { NavBreadcrumbs } from './components/NavBreadcrumbs'
 import { Button } from '@/components/ui/button'
 
-import { mockProduct } from '@/constants'
+import { mockProduct, PRODUCTS } from '@/constants'
 import { Product } from '@/types'
 import { Label } from '@/components/ui/label'
 
@@ -19,6 +19,8 @@ import { cn } from '@/lib/utils'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import { Section } from '@/components/shared/Section'
+import { ProductList } from '@/components/shared/ProductList'
 
 export function ProductPage() {
   const { pathname } = useLocation()
@@ -41,7 +43,7 @@ export function ProductPage() {
   }
 
   return (
-    <div className='px-5 pt-5 pb-20 md:pb-32 md:px-24 bg-slate-100 flex flex-col gap-5 md:gap-10'>
+    <div className='px-5 pt-5 pb-20 md:pb-28 md:px-24 bg-slate-100 flex flex-col gap-5 md:gap-10'>
       <NavBreadcrumbs />
 
       <section className='flex flex-col md:flex-row gap-10 md:gap-10'>
@@ -111,6 +113,14 @@ export function ProductPage() {
           <BuyButton />
         </div>
       </section>
+
+      <Section
+        title='Produtos relacionados'
+        link={{ text: 'Ver todos', href: '#' }}
+        className='md:px-0 px-0'
+      >
+        <ProductList products={PRODUCTS} count={4} />
+      </Section>
     </div>
   )
 }
