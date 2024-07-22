@@ -45,14 +45,14 @@ export function ProductPage() {
         setProduct(null)
         setError(true)
       }
-    }, 600) // delay
+    }, 400)
   }, [id])
 
   if (error) {
     return <NotFoundProduct />
   }
 
-  if (!product) {
+  if (!product || product.id !== id) {
     return <ProductPageSkeleton />
   }
 
