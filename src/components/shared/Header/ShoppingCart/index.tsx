@@ -1,22 +1,12 @@
-import { useState, useEffect } from 'react'
 import { ShoppingCartIcon } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 
 import { cn } from '@/lib/utils'
+import { useCartStore } from '@/stores/useCartStore'
 
 export function ShoppingCart() {
   // Simulando uma chamada à API para buscar quantidade de produtos no carrinho
-  const [productsInCart, setProductsInCart] = useState<number>(0)
-
-  useEffect(() => {
-    // Simulação de chamada à API
-    const fetchCartItems = async () => {
-      const itemsInCart = 2 // Simulação
-      setProductsInCart(itemsInCart)
-    }
-
-    fetchCartItems()
-  }, [])
+  const productsInCart = useCartStore((state) => state.productsInCart)
 
   return (
     <div className='indicator'>

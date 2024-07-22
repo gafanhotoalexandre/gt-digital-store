@@ -124,7 +124,7 @@ export function ProductPage() {
             )}
           />
 
-          <BuyButton />
+          <BuyButton product={product} />
         </div>
       </section>
 
