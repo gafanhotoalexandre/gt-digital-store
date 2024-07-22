@@ -1,3 +1,5 @@
+import { ShoppingCartIcon } from 'lucide-react'
+
 import { useCartStore } from '@/stores/useCartStore'
 import { Badge } from '@/components/ui/badge'
 import {
@@ -5,7 +7,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover'
-import { ShoppingCartIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 export function PopoverCart() {

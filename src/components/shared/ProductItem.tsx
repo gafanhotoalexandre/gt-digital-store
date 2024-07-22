@@ -42,7 +42,7 @@ export const ProductItem = ({
         {title}
       </h2>
       <div className='flex items-center mt-2'>
-        <span className='line-through text-sm md:text-xl text-zinc-400'>
+        <span className='line-through text-sm md:text-xl text-zinc-400 whitespace-nowrap overflow-hidden text-ellipsis'>
           {formatCurrencyBRL(originalPrice)}
         </span>
         <span className='text-base md:text-2xl font-bold text-zinc-800 ml-2'>
