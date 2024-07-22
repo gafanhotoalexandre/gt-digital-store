@@ -9,6 +9,7 @@ import { FilterSidebarMobile } from './components/FilterSidebarMobile'
 import { PRODUCTS } from '@/constants'
 
 import { ProductsPageSkeleton } from './loading'
+import { Frown } from 'lucide-react'
 
 const options = [
   { value: 'relevant', label: 'mais relevantes' },
@@ -66,11 +67,28 @@ export function ProductsPage() {
       <div className='flex flex-col gap-7 md:flex-row md:items-start'>
         <FilterSidebar />
 
-        <div className='grid grid-cols-2 md:grid-cols-3 gap-7 flex-1'>
-          {products.map((product, index) => (
-            <ProductItem key={index} {...product} />
-          ))}
-        </div>
+        {products.length > 0 ? (
+          <div className='grid grid-cols-2 md:grid-cols-3 gap-7 flex-1'>
+            {products.map((product, index) => (
+              <ProductItem key={index} {...product} />
+            ))}
+          </div>
+        ) : (
+          <div className='flex flex-col items-center justify-center h-full w-full py-10 gap-2'>
+            <Frown className='w-20 h-20 text-zinc-400 mb-4' />
+
+            <div>
+              <h2 className='text-2xl text-center font-bold text-zinc-600 mb-2'>
+                Nada encontrado
+              </h2>
+
+              <p className='text-zinc-500'>
+                Desculpe, não conseguimos encontrar produtos correspondentes à
+                sua busca.
+              </p>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )

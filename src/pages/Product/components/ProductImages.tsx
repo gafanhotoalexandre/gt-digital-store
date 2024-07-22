@@ -40,7 +40,7 @@ export function ProductImages({ thumbnails }: ProductImagesProps) {
               src={url}
               alt={altText}
               className={cn(
-                'w-full rounded-lg px-12 py-20 md:px-24 md:py-40 md:min-h-[560px]',
+                'w-full object-contain rounded-lg px-12 py-20 md:px-24 md:py-40 md:min-h-[560px]',
                 bgColor
               )}
             />

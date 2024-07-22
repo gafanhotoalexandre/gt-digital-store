@@ -1,31 +1,36 @@
-import { shoeProductImage } from './images'
+import { shoeProductImage, productNikeImage } from './images'
 import { Product } from '@/types'
 import { PRODUCTS } from './products'
 import { getRandomRating, getRandomReviews } from '@/lib/randomize'
 
 const thumbnails = [
   {
-    url: shoeProductImage,
+    // url: shoeProductImage,
+    url: productNikeImage,
     altText: 'Imagem 1 do produto',
     bgColor: 'bg-indigo-100',
   },
   {
-    url: shoeProductImage,
+    // url: shoeProductImage,
+    url: productNikeImage,
     altText: 'Imagem 2 do produto',
     bgColor: 'bg-amber-100',
   },
   {
-    url: shoeProductImage,
+    // url: shoeProductImage,
+    url: productNikeImage,
     altText: 'Imagem 3 do produto',
     bgColor: 'bg-red-100',
   },
   {
-    url: shoeProductImage,
+    // url: shoeProductImage,
+    url: productNikeImage,
     altText: 'Imagem 4 do produto',
     bgColor: 'bg-yellow-600',
   },
   {
-    url: shoeProductImage,
+    // url: shoeProductImage,
+    url: productNikeImage,
     altText: 'Imagem 5 do produto',
     bgColor: 'bg-orange-100',
   },
