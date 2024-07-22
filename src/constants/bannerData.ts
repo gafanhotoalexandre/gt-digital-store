@@ -1,4 +1,4 @@
-import { shoeImage, ornamentImage } from './images'
+import { shoeHomeImage, ornamentImage } from './images'
 
 export const BANNER_DATA = [
   {
@@ -7,7 +7,7 @@ export const BANNER_DATA = [
     description:
       'Consequat culpa exercitation mollit nisi excepteur do do tempor laboris eiusmod irure consectetur.',
     buttonText: 'Ver Ofertas',
-    imageSrc: shoeImage,
+    imageSrc: shoeHomeImage,
     ornamentSrc: ornamentImage,
     altText: 'Nike Shoe',
   },

@@ -1,4 +1,4 @@
-import shoeImage from '@/assets/hero_section_shoe.svg'
+import shoeHomeImage from '@/assets/hero_section_shoe.svg'
 import ornamentImage from '@/assets/ornament.svg'
 import supremeImage from '@/assets/supreme_image.png'
 import adidasImage from '@/assets/adidas_image.svg'
@@ -12,7 +12,7 @@ import shoeProductImage from '@/assets/product_shoe.svg'
 import productNikeImage from '@/assets/nike_shoe.svg'
 
 export {
-  shoeImage,
+  shoeHomeImage,
   ornamentImage,
   supremeImage,
   adidasImage,
