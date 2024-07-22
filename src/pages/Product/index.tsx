@@ -4,7 +4,7 @@ import { useLocation, useParams } from 'react-router-dom'
 import { NavBreadcrumbs } from './components/NavBreadcrumbs'
 import { Button } from '@/components/ui/button'
 
-import { mockProduct, PRODUCTS } from '@/constants'
+import { MOCK_PRODUCTS, PRODUCTS } from '@/constants'
 import { Product } from '@/types'
 import { Label } from '@/components/ui/label'
 
@@ -21,22 +21,36 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { Section } from '@/components/shared/Section'
 import { ProductList } from '@/components/shared/ProductList'
+import { NotFoundProduct } from './components/NotFoundProduct'
 
 export function ProductPage() {
   const { pathname } = useLocation()
   const { id } = useParams<{ id: string }>()
   const [product, setProduct] = useState<Product | null>(null)
 
+  const [error, setError] = useState(false)
+
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [pathname])
 
   useEffect(() => {
-    // simulando chamada a api
+    // simulando chamada a API
     setTimeout(() => {
-      setProduct(mockProduct)
+      const foundProduct = MOCK_PRODUCTS.find((product) => product.id === id)
+      if (foundProduct) {
+        setProduct(foundProduct)
+        setError(false)
+      } else {
+        setProduct(null)
+        setError(true)
+      }
     }, 600) // delay
   }, [id])
+
+  if (error) {
+    return <NotFoundProduct />
+  }
 
   if (!product) {
     return <ProductPageSkeleton />
