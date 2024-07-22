@@ -10,18 +10,18 @@ export function ShoppingCart() {
 
   return (
     <div className='indicator'>
-      {productsInCart > 0 && (
+      {productsInCart.length > 0 && (
         <Badge
           variant='destructive'
           className='indicator-item badge w-5 border-none text-white font-bold'
         >
-          {productsInCart}
+          {productsInCart.length}
         </Badge>
       )}
       <ShoppingCartIcon
         className={cn(
           'h-6 w-6 text-gray-700',
-          productsInCart && 'text-primary'
+          productsInCart.length > 0 && 'text-primary'
         )}
       />
     </div>

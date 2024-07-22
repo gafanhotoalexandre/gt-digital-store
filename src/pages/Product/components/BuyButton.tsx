@@ -11,7 +11,7 @@ export function BuyButton({ product }: BuyButtonProps) {
   const addToCart = useCartStore((state) => state.addToCart)
 
   function handleAddToCart() {
-    addToCart()
+    addToCart(product)
     toast.success(`Produto ${product.name} adicionado ao carrinho`, {
       description: 'Você pode ver os detalhes no seu carrinho.',
       action: {
