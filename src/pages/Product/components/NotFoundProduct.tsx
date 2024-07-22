@@ -16,7 +16,7 @@ export function NotFoundProduct() {
         <Button className='w-48' onClick={() => window.history.back()}>
           Voltar
         </Button>
-      </div>{' '}
+      </div>
     </section>
   )
 }
