@@ -14,9 +14,21 @@ export const useCartStore = create<CartState>()(
     (set) => ({
       productsInCart: [],
       addToCart: (product) =>
-        set((state) => ({
-          productsInCart: [...state.productsInCart, product],
-        })),
+        set((state) => {
+          const isProductInCart = state.productsInCart.some(
+            (p) => p.id === product.id
+          )
+
+          if (isProductInCart) {
+            // Opcional: incrementar a quantidade se o produto já estiver no carrinho
+            // ou exibir uma mensagem de erro/toast
+            return state // Retorna o estado inalterado
+          }
+
+          return {
+            productsInCart: [...state.productsInCart, product],
+          }
+        }),
       removeFromCart: (productId) =>
         set((state) => ({
           productsInCart: state.productsInCart.filter(

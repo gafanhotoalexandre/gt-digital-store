@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { useCartStore } from '@/stores/useCartStore'
 import { Product } from '@/types'
+import { useNavigate } from 'react-router-dom'
 import { toast } from 'sonner'
 
 interface BuyButtonProps {
@@ -9,6 +10,7 @@ interface BuyButtonProps {
 
 export function BuyButton({ product }: BuyButtonProps) {
   const addToCart = useCartStore((state) => state.addToCart)
+  const navigate = useNavigate()
 
   function handleAddToCart() {
     addToCart(product)
@@ -16,7 +18,7 @@ export function BuyButton({ product }: BuyButtonProps) {
       description: 'Você pode ver os detalhes no seu carrinho.',
       action: {
         label: 'Ver carrinho',
-        onClick: () => (window.location.href = '/carrinho'),
+        onClick: () => navigate('/produtos/carrinho'),
       },
       classNames: {
         actionButton: '!bg-primary',

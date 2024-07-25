@@ -89,7 +89,7 @@ export function PopoverCart() {
                     E mais {productsInCart.length - maxVisibleProducts}{' '}
                     produtos.
                     <br />
-                    <Link to='/carrinho' className='text-primary'>
+                    <Link to='/produtos/carrinho' className='text-primary'>
                       Ver todos no carrinho
                     </Link>
                   </p>
@@ -111,7 +111,7 @@ export function PopoverCart() {
                   </Button>
 
                   <Button asChild>
-                    <Link className='hover:text-white' to='/carrinho'>
+                    <Link className='hover:text-white' to='/produtos/carrinho'>
                       Ver Carrinho
                     </Link>
                   </Button>
