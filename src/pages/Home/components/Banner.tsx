@@ -33,7 +33,7 @@ export function Banner({
         <h2 className='text-primary font-bold text-sm md:text-base'>
           {subtitle}
         </h2>
-        <h1 className='text-4xl font-bold'>
+        <h1 className='text-4xl font-extrabold text-zinc-950'>
           {title}{' '}
           <span role='img' aria-label='fire'>
             🔥
