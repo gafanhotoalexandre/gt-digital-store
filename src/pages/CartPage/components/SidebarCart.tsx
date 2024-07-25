@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
+import { formatCurrencyBRL } from '@/lib/currency'
 import { useCartStore } from '@/stores/useCartStore'
 
 export default function SidebarCart() {
@@ -22,25 +23,27 @@ export default function SidebarCart() {
 
         <div className='flex justify-between mb-5'>
           <span className='font-medium text-zinc-500'>Subtotal:</span>
-          <span>R$ {subtotal.toFixed(2)}</span>
+          <span className='text-zinc-800'>{formatCurrencyBRL(subtotal)}</span>
         </div>
 
         <div className='flex justify-between mb-5'>
           <span className='font-medium text-zinc-500'>Frete:</span>
-          <span>R$ {frete.toFixed(2)}</span>
+          <span className='text-zinc-800'>{formatCurrencyBRL(frete)}</span>
         </div>
 
         <div className='flex justify-between mb-5'>
           <span className='font-medium text-zinc-500'>Desconto:</span>
-          <span>R$ {desconto.toFixed(2)}</span>
+          <span className='text-zinc-800'>{formatCurrencyBRL(desconto)}</span>
         </div>
 
         <div className='flex justify-between font-bold text-lg'>
-          <span className='text-gray-800'>Total:</span>
-          <span className='text-primary'>R$ {total.toFixed(2)}</span>
+          <span className='text-zinc-800'>Total:</span>
+          <span className='text-error'>R$ {total.toFixed(2)}</span>
         </div>
 
-        <Button className='mt-6 w-full'>Continuar</Button>
+        <Button className='mt-6 w-full bg-yellow-500 hover:bg-yellow-500/90'>
+          Continuar
+        </Button>
       </div>
     </>
   )
