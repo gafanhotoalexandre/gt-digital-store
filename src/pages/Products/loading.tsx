@@ -15,9 +15,9 @@ export function ProductsPageSkeleton() {
 
         <div className='grid grid-cols-2 md:grid-cols-3 gap-7 flex-1'>
           {Array.from({ length: 12 }).map((_, index) => (
-            <div className='flex flex-col gap-2'>
-              <Skeleton key={index} className='h-40 w-full bg-gray-200' />
-              <Skeleton key={index} className='h-16 w-full bg-gray-200' />
+            <div key={index} className='flex flex-col gap-2'>
+              <Skeleton className='h-40 w-full bg-gray-200' />
+              <Skeleton className='h-16 w-full bg-gray-200' />
             </div>
           ))}
         </div>
