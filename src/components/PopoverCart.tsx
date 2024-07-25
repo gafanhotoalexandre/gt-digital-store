@@ -110,7 +110,7 @@ export function PopoverCart() {
                     Esvaziar
                   </Button>
 
-                  <Button asChild onClick={clearCart}>
+                  <Button asChild>
                     <Link className='hover:text-white' to='/carrinho'>
                       Ver Carrinho
                     </Link>
