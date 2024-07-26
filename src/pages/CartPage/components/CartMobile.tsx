@@ -59,6 +59,7 @@ export function CartMobile({ quantity, onIncrease, onDecrease }: CartProps) {
                   <Input
                     type='number'
                     value={quantity}
+                    readOnly
                     className='mx-2 border-none w-16 text-center [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none'
                   />
                   <Button

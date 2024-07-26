@@ -73,6 +73,7 @@ export const Cart = ({ quantity, onIncrease, onDecrease }: CartProps) => {
                     <Input
                       type='number'
                       value={quantity}
+                      readOnly
                       className='max-w-12 text-center [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none'
                     />
                     <Button variant='outline' onClick={onIncrease}>
