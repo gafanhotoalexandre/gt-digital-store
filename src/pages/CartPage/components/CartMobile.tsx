@@ -6,7 +6,9 @@ import { formatCurrencyBRL } from '@/lib/currency'
 import { LabeledInput } from './LabeledInput'
 import { Separator } from '@/components/ui/separator'
 
-export function CartMobile() {
+import { CartProps } from './Cart'
+
+export function CartMobile({ quantity, onIncrease, onDecrease }: CartProps) {
   const { productsInCart, removeFromCart } = useCartStore()
 
   return (
@@ -50,19 +52,19 @@ export function CartMobile() {
                   <Button
                     variant='outline'
                     className='flex-1'
-                    onClick={() => console.log('Decrease')}
+                    onClick={onDecrease}
                   >
                     -
                   </Button>
                   <Input
                     type='number'
-                    value={1}
+                    value={quantity}
                     className='mx-2 border-none w-16 text-center [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none'
                   />
                   <Button
                     variant='outline'
                     className='flex-1'
-                    onClick={() => console.log('Increase')}
+                    onClick={onIncrease}
                   >
                     +
                   </Button>

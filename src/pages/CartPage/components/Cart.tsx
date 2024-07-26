@@ -14,7 +14,13 @@ import { cn } from '@/lib/utils'
 import { formatCurrencyBRL } from '@/lib/currency'
 import { LabeledInput } from './LabeledInput'
 
-export const Cart = () => {
+export interface CartProps {
+  quantity: number
+  onIncrease: () => void
+  onDecrease: () => void
+}
+
+export const Cart = ({ quantity, onIncrease, onDecrease }: CartProps) => {
   const { productsInCart, removeFromCart } = useCartStore()
 
   return (
@@ -61,13 +67,17 @@ export const Cart = () => {
 
                 <TableCell className='py-2'>
                   <div className='flex items-center gap-2'>
-                    <Button variant='outline'>-</Button>
+                    <Button variant='outline' onClick={onDecrease}>
+                      -
+                    </Button>
                     <Input
                       type='number'
-                      value={1}
+                      value={quantity}
                       className='max-w-12 text-center [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none'
                     />
-                    <Button variant='outline'>+</Button>
+                    <Button variant='outline' onClick={onIncrease}>
+                      +
+                    </Button>
                   </div>
 
                   <Button
