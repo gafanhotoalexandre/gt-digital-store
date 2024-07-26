@@ -18,7 +18,7 @@ export const Cart = () => {
   const { productsInCart, removeFromCart } = useCartStore()
 
   return (
-    <div className='p-8 bg-white rounded-lg shadow-lg grow'>
+    <div className='p-8 bg-white rounded-lg shadow-lg grow hidden lg:block'>
       <div className='mb-6'>
         <Table>
           <TableHeader>
@@ -36,7 +36,7 @@ export const Cart = () => {
             {productsInCart.map((product, index) => (
               <TableRow className='!border-b' key={index}>
                 <TableCell className='py-2'>
-                  <div className='flex items-center gap-4'>
+                  <div className='flex flex-col min-[1210px]:flex-row min-[1210px]:items-center gap-4'>
                     <img
                       src={product.thumbnails[0].url}
                       alt={product.thumbnails[0].altText}
