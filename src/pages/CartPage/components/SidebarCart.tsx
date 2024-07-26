@@ -1,11 +1,12 @@
+import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { formatCurrencyBRL } from '@/lib/currency'
 import { useCartStore } from '@/stores/useCartStore'
-import { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
 
-export default function SidebarCart() {
+export function SidebarCart() {
   const { productsInCart } = useCartStore()
   const navigate = useNavigate()
 
