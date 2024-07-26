@@ -104,10 +104,10 @@ export const Cart = ({ quantity, onIncrease, onDecrease }: CartProps) => {
                 <TableCell className='align-top'>
                   <div className='flex flex-col'>
                     <span className='text-zinc-300 line-through text-center'>
-                      {formatCurrencyBRL(product.originalPrice)}
+                      {formatCurrencyBRL(product.originalPrice * quantity)}
                     </span>
                     <span className='text-base font-bold text-zinc-700'>
-                      {formatCurrencyBRL(product.price)}
+                      {formatCurrencyBRL(product.price * quantity)}
                     </span>
                   </div>
                 </TableCell>

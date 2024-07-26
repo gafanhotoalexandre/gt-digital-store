@@ -102,11 +102,11 @@ export function CartMobile({ quantity, onIncrease, onDecrease }: CartProps) {
 
                   <div className='flex items-center gap-1'>
                     <p className='text-sm text-zinc-600 line-through'>
-                      {formatCurrencyBRL(product.originalPrice * 1)}
+                      {formatCurrencyBRL(product.originalPrice * quantity)}
                     </p>
 
                     <p className='text-base font-bold text-zinc-700'>
-                      {formatCurrencyBRL(product.price * 1)}
+                      {formatCurrencyBRL(product.price * quantity)}
                     </p>
                   </div>
                 </div>
