@@ -20,7 +20,10 @@ export function PopoverCart() {
 
   const calculateTotal = () => {
     const totalPrice = productsInCart
-      .reduce((total, product) => total + product.price, 0)
+      .reduce(
+        (total, { product, quantity }) => total + product.price * quantity,
+        0
+      )
       .toFixed(2)
 
     return formatCurrencyBRL(Number.parseFloat(totalPrice))
@@ -62,7 +65,7 @@ export function PopoverCart() {
               <div className='grid gap-6'>
                 {productsInCart
                   .slice(0, maxVisibleProducts)
-                  .map((product, index) => (
+                  .map(({ product }, index) => (
                     <div
                       key={index}
                       className='grid grid-cols-3 items-center gap-4'

@@ -6,10 +6,22 @@ import { formatCurrencyBRL } from '@/lib/currency'
 import { LabeledInput } from './LabeledInput'
 import { Separator } from '@/components/ui/separator'
 
-import { CartProps } from './Cart'
+export function CartMobile() {
+  const { productsInCart, removeFromCart, updateQuantity } = useCartStore()
 
-export function CartMobile({ quantity, onIncrease, onDecrease }: CartProps) {
-  const { productsInCart, removeFromCart } = useCartStore()
+  const handleIncrease = (productId: string) => {
+    const productInCart = productsInCart.find((p) => p.product.id === productId)
+    if (productInCart) {
+      updateQuantity(productId, productInCart.quantity + 1)
+    }
+  }
+
+  const handleDecrease = (productId: string) => {
+    const productInCart = productsInCart.find((p) => p.product.id === productId)
+    if (productInCart && productInCart.quantity > 1) {
+      updateQuantity(productId, productInCart.quantity - 1)
+    }
+  }
 
   return (
     <div className='lg:hidden space-y-2'>
@@ -18,9 +30,9 @@ export function CartMobile({ quantity, onIncrease, onDecrease }: CartProps) {
         <div className='space-y-5'>
           <h2 className='text-lg font-bold text-zinc-700'>Meu Carrinho</h2>
 
-          <Separator className='' />
+          <Separator />
 
-          {productsInCart.map((product, index) => (
+          {productsInCart.map(({ product, quantity }, index) => (
             <div key={index} className='border-b pb-4'>
               <div className='flex items-center mb-4'>
                 <img
@@ -52,7 +64,7 @@ export function CartMobile({ quantity, onIncrease, onDecrease }: CartProps) {
                   <Button
                     variant='outline'
                     className='flex-1'
-                    onClick={onDecrease}
+                    onClick={() => handleDecrease(product.id)}
                   >
                     -
                   </Button>
@@ -65,7 +77,7 @@ export function CartMobile({ quantity, onIncrease, onDecrease }: CartProps) {
                   <Button
                     variant='outline'
                     className='flex-1'
-                    onClick={onIncrease}
+                    onClick={() => handleIncrease(product.id)}
                   >
                     +
                   </Button>

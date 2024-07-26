@@ -3,9 +3,10 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
 type CartState = {
-  productsInCart: Product[]
+  productsInCart: { product: Product; quantity: number }[]
   addToCart: (product: Product) => void
   removeFromCart: (productId: string) => void
+  updateQuantity: (productId: string, quantity: number) => void
   clearCart: () => void
 }
 
@@ -15,24 +16,35 @@ export const useCartStore = create<CartState>()(
       productsInCart: [],
       addToCart: (product) =>
         set((state) => {
-          const isProductInCart = state.productsInCart.some(
-            (p) => p.id === product.id
+          const productInCart = state.productsInCart.find(
+            (p) => p.product.id === product.id
           )
 
-          if (isProductInCart) {
-            // Opcional: incrementar a quantidade se o produto já estiver no carrinho
-            // ou exibir uma mensagem de erro/toast
-            return state // Retorna o estado inalterado
+          if (productInCart) {
+            // Incrementa a quantidade se o produto já estiver no carrinho
+            return {
+              productsInCart: state.productsInCart.map((p) =>
+                p.product.id === product.id
+                  ? { ...p, quantity: p.quantity + 1 }
+                  : p
+              ),
+            }
           }
 
           return {
-            productsInCart: [...state.productsInCart, product],
+            productsInCart: [...state.productsInCart, { product, quantity: 1 }],
           }
         }),
       removeFromCart: (productId) =>
         set((state) => ({
           productsInCart: state.productsInCart.filter(
-            (product) => product.id !== productId
+            (p) => p.product.id !== productId
+          ),
+        })),
+      updateQuantity: (productId, quantity) =>
+        set((state) => ({
+          productsInCart: state.productsInCart.map((p) =>
+            p.product.id === productId ? { ...p, quantity } : p
           ),
         })),
       clearCart: () => set({ productsInCart: [] }),

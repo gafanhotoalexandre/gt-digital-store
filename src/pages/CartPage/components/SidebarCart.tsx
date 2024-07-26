@@ -7,13 +7,17 @@ export default function SidebarCart() {
   const { productsInCart } = useCartStore()
 
   const calculateSubtotal = () => {
-    return productsInCart.reduce((total, product) => total + product.price, 0)
+    return productsInCart.reduce(
+      (total, { product, quantity }) => total + product.price * quantity,
+      0
+    )
   }
 
   const subtotal = calculateSubtotal()
   const frete = 0
   const desconto = 30 // Valor fixo de desconto, pode ser dinâmico
   const total = subtotal - desconto + frete
+
   return (
     <>
       <div className='bg-white p-8 rounded-lg shadow-md w-full flex-1 md:min-w-[334px]'>

@@ -14,14 +14,22 @@ import { cn } from '@/lib/utils'
 import { formatCurrencyBRL } from '@/lib/currency'
 import { LabeledInput } from './LabeledInput'
 
-export interface CartProps {
-  quantity: number
-  onIncrease: () => void
-  onDecrease: () => void
-}
+export const Cart = () => {
+  const { productsInCart, removeFromCart, updateQuantity } = useCartStore()
 
-export const Cart = ({ quantity, onIncrease, onDecrease }: CartProps) => {
-  const { productsInCart, removeFromCart } = useCartStore()
+  const handleIncrease = (productId: string) => {
+    const productInCart = productsInCart.find((p) => p.product.id === productId)
+    if (productInCart) {
+      updateQuantity(productId, productInCart.quantity + 1)
+    }
+  }
+
+  const handleDecrease = (productId: string) => {
+    const productInCart = productsInCart.find((p) => p.product.id === productId)
+    if (productInCart && productInCart.quantity > 1) {
+      updateQuantity(productId, productInCart.quantity - 1)
+    }
+  }
 
   return (
     <div className='p-8 bg-white rounded-lg shadow-lg grow hidden lg:block'>
@@ -39,7 +47,7 @@ export const Cart = ({ quantity, onIncrease, onDecrease }: CartProps) => {
           </TableHeader>
 
           <TableBody>
-            {productsInCart.map((product, index) => (
+            {productsInCart.map(({ product, quantity }, index) => (
               <TableRow className='!border-b' key={index}>
                 <TableCell className='py-2'>
                   <div className='flex flex-col min-[1210px]:flex-row min-[1210px]:items-center gap-4'>
@@ -67,7 +75,10 @@ export const Cart = ({ quantity, onIncrease, onDecrease }: CartProps) => {
 
                 <TableCell className='py-2'>
                   <div className='flex items-center gap-2'>
-                    <Button variant='outline' onClick={onDecrease}>
+                    <Button
+                      variant='outline'
+                      onClick={() => handleDecrease(product.id)}
+                    >
                       -
                     </Button>
                     <Input
@@ -76,7 +87,10 @@ export const Cart = ({ quantity, onIncrease, onDecrease }: CartProps) => {
                       readOnly
                       className='max-w-12 text-center [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none'
                     />
-                    <Button variant='outline' onClick={onIncrease}>
+                    <Button
+                      variant='outline'
+                      onClick={() => handleIncrease(product.id)}
+                    >
                       +
                     </Button>
                   </div>
