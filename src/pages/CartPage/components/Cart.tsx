@@ -64,7 +64,7 @@ export const Cart = () => {
                     <Button variant='outline'>-</Button>
                     <Input
                       type='number'
-                      // value={1}
+                      value={1}
                       className='max-w-12 text-center [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none'
                     />
                     <Button variant='outline'>+</Button>

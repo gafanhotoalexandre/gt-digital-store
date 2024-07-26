@@ -13,10 +13,10 @@ export function CartMobile() {
     <div className='lg:hidden space-y-2'>
       <div className='p-8 bg-white rounded-lg shadow-lg grow block w-full'>
         {/* Mobile version */}
-        <div className=''>
+        <div className='space-y-5'>
           <h2 className='text-lg font-bold text-zinc-700'>Meu Carrinho</h2>
 
-          <Separator className='my-5' />
+          <Separator className='' />
 
           {productsInCart.map((product, index) => (
             <div key={index} className='border-b pb-4'>
